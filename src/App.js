@@ -27,23 +27,27 @@ function App() {
     setCatSelect(!catSelect);
   };
   const handleSubmit = async () => {
-    setResponseArray([]);
-    setRevealButtons(false);
-    let fullOptionObj = { ...option, prompt: input };
-    // console.log(fullOptionObj);
-    const response = await openai.createCompletion(fullOptionObj);
-    // console.log(response);
-    // console.log("response", response.data.choices[0].text);
+    try {
+      setResponseArray([]);
+      setRevealButtons(false);
+      let fullOptionObj = { ...option, prompt: input };
+      // console.log(fullOptionObj);
+      const response = await openai.createCompletion(fullOptionObj);
+      // console.log(response);
+      // console.log("response", response.data.choices[0].text);
 
-    const responseArray = response.data.choices[0].text.split("\n");
-    setResponseArray(responseArray);
-    // console.log("rr", responseArray);
-    setUpdatedResponseArray([
-      ...updatedResponseArray,
-      response.data.choices[0].text
-        .split("\n")
-        .filter((lines) => lines.length !== 0),
-    ]);
+      const responseArray = response.data.choices[0].text.split("\n");
+      setResponseArray(responseArray);
+      // console.log("rr", responseArray);
+      setUpdatedResponseArray([
+        ...updatedResponseArray,
+        response.data.choices[0].text
+          .split("\n")
+          .filter((lines) => lines.length !== 0),
+      ]);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   // console.log("rr2", responseArray, updatedResponseArray);
