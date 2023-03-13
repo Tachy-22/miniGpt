@@ -10,7 +10,7 @@ function Translation({
   settings,
 }) {
   return (
-    <div className="grid lg:grid-cols-2 grid-cols-1  gap-6 w-full     relative p-10 pt-16">
+    <div className="grid lg:grid-cols-2 grid-cols-1  gap-6 w-full lg:h-full  h-fit   relative p-10 pt-16">
       <div
         className={`${
           settings ? "bg-white text-black" : "bg-gray-800"

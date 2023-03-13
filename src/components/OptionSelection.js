@@ -37,7 +37,7 @@ function OptionSelection({
           <h1 className="font-bold title_font text-5xl m-5 text-teal-200">
             REACT AI APP
           </h1>
-          <div className="grid grid-cols-2 ">
+          <div className="lg:grid lg:grid-cols-2  flex flex-col">
             {Categories.map((categories, index) => {
               return (
                 <>
