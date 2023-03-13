@@ -70,9 +70,8 @@ function Translation({
               <div className={`flex flex-wrap  h-full  w-full flex-col`}>
                 {item?.map((lines, index2) => {
                   return (
-                    <div className="flex break-words w-fit m-4">
+                    <div key={index2} className="flex break-words w-fit m-4">
                       <p
-                        key={index2}
                         className={`flex  text-decoration underline underline-offset-8 w-fit  robot_font  hover:backdrop-brightness-50`}
                       >
                         {lines}

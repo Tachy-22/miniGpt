@@ -1,11 +1,17 @@
+
 import { Configuration, OpenAIApi } from "openai";
 import OptionSelection from "./components/OptionSelection";
 import { Categories } from "./Assets/ChatBotCategories";
 import { useState } from "react";
 
 function App() {
+  console.log(
+    "my key",
+    process.env.REACT_APP_API_KEY,
+    process.env.REACT_APP_TEST_VAR
+  );
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: process.env.REACT_APP_API_KEY,
   });
   const openai = new OpenAIApi(configuration);
   const [revealButtons, setRevealButtons] = useState(false);
