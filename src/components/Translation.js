@@ -10,7 +10,7 @@ function Translation({
   settings,
 }) {
   return (
-    <div className="grid lg:grid-cols-2 grid-cols-1  gap-6 w-full lg:h-full  h-fit relative lg:p-10 lg:pt-16 p-1 pt-16 ">
+    <div className="grid lg:grid-cols-2 grid-cols-1  gap-6 w-full lg:h-full  h-fit relative lg:p-10 lg:pt-16 p-2 pt-16 ">
       <div
         className={`${
           settings ? "bg-white text-black" : "bg-gray-800"
@@ -27,7 +27,7 @@ function Translation({
             <textarea
               onChange={handleTextInput}
               value={input}
-              className="bg-inherit flex flex-wrap text-xl  p-4 text-xl outline-none  w-full h-full "
+              className="bg-inherit flex flex-wrap  p-4 text-xl outline-none  w-full h-full "
               autoFocus={true}
             ></textarea>
           </div>
@@ -58,10 +58,10 @@ function Translation({
               key={index}
               className={`text-xl min-h-fit rounded-lg border ${
                 settings ? "bg-white text-black" : "bg-gray-500 "
-              }  w-full md:flex-nowrap flex flex-wrap  items-start p-5`}
+              }  w-full md:flex-nowrap flex flex-wrap  lg:items-start  lg:p-5 p-0`}
             >
-              <div className="flex items-center">
-                <picture className="flex justify-center w-16 mx-5 p-2 bg-gray-500 rounded-full border border-4">
+              <div className="flex items-center pt-3  h-full ">
+                <picture className="flex justify-center lg:w-16 w-12 mx-3 lg:mx-5 p-2 bg-gray-500 rounded-full  border-4">
                   <img src={RobotImg} alt="robotImg"></img>
                 </picture>
                 :

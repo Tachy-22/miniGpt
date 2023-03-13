@@ -46,7 +46,7 @@ function OptionSelection({
                     onClick={() => {
                       selectCategory(categories.option);
                     }}
-                    className="flex hover:text-gray-900 hover:bg-blue-100 text-2xl flex-wrap  rounded-md flex-col p-5 m-2 border items-center "
+                    className="flex hover:text-gray-900 hover:bg-blue-100 text-2xl flex-wrap  rounded-md flex-col p-5  m-2 border items-center "
                   >
                     <h2 className="text-3xl hover:text-teal-900">
                       {categories.name}
