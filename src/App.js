@@ -5,11 +5,7 @@ import { Categories } from "./Assets/ChatBotCategories";
 import { useState } from "react";
 
 function App() {
-  console.log(
-    "my key",
-    process.env.REACT_APP_API_KEY,
-    process.env.REACT_APP_TEST_VAR
-  );
+
   const configuration = new Configuration({
     apiKey: process.env.REACT_APP_API_KEY,
   });
@@ -27,7 +23,7 @@ function App() {
   };
 
   const selectCategory = (option) => {
-    console.log(option);
+    // console.log(option);
     setOption(option);
     setCatSelect(!catSelect);
   };
@@ -35,14 +31,14 @@ function App() {
     setResponseArray([]);
     setRevealButtons(false);
     let fullOptionObj = { ...option, prompt: input };
-    console.log(fullOptionObj);
+    // console.log(fullOptionObj);
     const response = await openai.createCompletion(fullOptionObj);
-    console.log(response);
-    console.log("response", response.data.choices[0].text);
+    // console.log(response);
+    // console.log("response", response.data.choices[0].text);
 
     const responseArray = response.data.choices[0].text.split("\n");
     setResponseArray(responseArray);
-    console.log("rr", responseArray);
+    // console.log("rr", responseArray);
     setUpdatedResponseArray([
       ...updatedResponseArray,
       response.data.choices[0].text
@@ -51,7 +47,7 @@ function App() {
     ]);
   };
 
-  console.log("rr2", responseArray, updatedResponseArray);
+  // console.log("rr2", responseArray, updatedResponseArray);
   const handleReset = () => {
     setInput("");
     setRevealButtons(false);
