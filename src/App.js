@@ -48,11 +48,11 @@ function App() {
   console.log("rr2", responseArray, updatedResponseArray);
   const handleReset = () => {
     setInput("");
+    setRevealButtons(false);
     setUpdatedResponseArray([]);
   };
   return (
     <div className=" realtive w-full flex flex-col justify-center items-center">
-    
       <OptionSelection
         Categories={Categories}
         selectCategory={selectCategory}

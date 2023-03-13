@@ -10,15 +10,15 @@ function Translation({
   settings,
 }) {
   return (
-    <div className="grid lg:grid-cols-2 grid-cols-1  gap-6 w-full lg:h-full  h-fit   relative p-10 pt-16">
+    <div className="grid lg:grid-cols-2 grid-cols-1  gap-6 w-full lg:h-full  h-fit relative lg:p-10 lg:pt-16 p-1 pt-16 ">
       <div
         className={`${
           settings ? "bg-white text-black" : "bg-gray-800"
-        }  rounded-lg border text-xl w-full  flex  flex-col  p-5`}
+        }  rounded-lg border text-xl w-full lg:h-full  flex  flex-col  lg:p-5 p-2`}
       >
-        <div className="flex items-start h-full">
-          <div className="flex items-center">
-            <picture className="flex justify-center w-16 mx-5 p-1 bg-gray-500 rounded-full">
+        <div className="flex lg:items-start items-center h-full ">
+          <div className="flex items-center justify-center ">
+            <picture className="flex justify-center items-center lg:w-16 w-12 lg:mx-5 mx-1 p-1 bg-gray-500 rounded-full">
               <img src={PersonImg} alt="personImg" />
             </picture>
             <p>:</p>
