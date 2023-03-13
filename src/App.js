@@ -1,12 +1,11 @@
-
 import { Configuration, OpenAIApi } from "openai";
 import OptionSelection from "./components/OptionSelection";
 import { Categories } from "./Assets/ChatBotCategories";
 import { useState } from "react";
 
 function App() {
-
   const configuration = new Configuration({
+    organization: "org-QJaTbGUUv2CbgM3EojHRd6Td",
     apiKey: process.env.REACT_APP_API_KEY,
   });
   const openai = new OpenAIApi(configuration);
