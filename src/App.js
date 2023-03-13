@@ -1,23 +1,69 @@
-import logo from './logo.svg';
-import './App.css';
+import { Configuration, OpenAIApi } from "openai";
+import OptionSelection from "./components/OptionSelection";
+import { Categories } from "./Assets/ChatBotCategories";
+import { useState } from "react";
 
 function App() {
+  const configuration = new Configuration({
+    apiKey: "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",
+  });
+  const openai = new OpenAIApi(configuration);
+  const [revealButtons, setRevealButtons] = useState(false);
+  const [input, setInput] = useState("");
+  const [option, setOption] = useState({});
+  const [catSelect, setCatSelect] = useState(false);
+  const [responseArray, setResponseArray] = useState([]);
+  const [updatedResponseArray, setUpdatedResponseArray] = useState([]);
+
+  const handleTextInput = (event) => {
+    setInput(event.target.value);
+    setRevealButtons(true);
+  };
+
+  const selectCategory = (option) => {
+    console.log(option);
+    setOption(option);
+    setCatSelect(!catSelect);
+  };
+  const handleSubmit = async () => {
+    setResponseArray([]);
+    setRevealButtons(false);
+    let fullOptionObj = { ...option, prompt: input };
+    console.log(fullOptionObj);
+    const response = await openai.createCompletion(fullOptionObj);
+    console.log(response);
+    console.log("response", response.data.choices[0].text);
+
+    const responseArray = response.data.choices[0].text.split("\n");
+    setResponseArray(responseArray);
+    console.log("rr", responseArray);
+    setUpdatedResponseArray([
+      ...updatedResponseArray,
+      response.data.choices[0].text
+        .split("\n")
+        .filter((lines) => lines.length !== 0),
+    ]);
+  };
+
+  console.log("rr2", responseArray, updatedResponseArray);
+  const handleReset = () => {
+    setInput("");
+    setUpdatedResponseArray([]);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=" realtive w-full flex flex-col justify-center items-center">
+    
+      <OptionSelection
+        Categories={Categories}
+        selectCategory={selectCategory}
+        catSelect={catSelect}
+        handleTextInput={handleTextInput}
+        input={input}
+        handleReset={handleReset}
+        handleSubmit={handleSubmit}
+        revealButtons={revealButtons}
+        updatedResponseArray={updatedResponseArray}
+      ></OptionSelection>
     </div>
   );
 }

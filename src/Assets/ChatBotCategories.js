@@ -1,0 +1,196 @@
+export const Categories = [
+  {
+    name: "Chat with Ai bot",
+    id: "Chat-with-ai-bot",
+    description: "Open ended conversation with an AI assistant.",
+    option: {
+      model: "text-davinci-003",
+      temperature: 1,
+      max_tokens: 300,
+      top_p: 1,
+      frequency_penalty: 0.7,
+      presence_penalty: 0.6,
+      stop: [" \n"],
+    },
+  },
+  {
+    name: "Q&A",
+    id: "question-answering",
+    description:
+      "Answer a question given some context and additional information.",
+    option: {
+      model: "text-davinci-003",
+      temperature: 0,
+      max_tokens: 100,
+      top_p: 1,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
+      stop: ["\n"],
+    },
+  },
+  {
+    name: "Grammar Correction",
+    id: "grammar-correction",
+    description: "Correct the grammar of a piece of text.",
+    option: {
+      model: "text-davinci-003",
+      temperature: 0,
+      max_tokens: 60,
+      top_p: 1.0,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
+    },
+  },
+  {
+    name: "JavaScript helper chatbot",
+    id: "javascript-helper-chatbot",
+    description: "Message-style bot that answers JavaScript questions.",
+    option: {
+      model: "code-davinci-002",
+      temperature: 0,
+      max_tokens: 60,
+      top_p: 1.0,
+      frequency_penalty: 0.5,
+      presence_penalty: 0.0,
+      stop: ["You:"],
+    },
+  },
+  {
+    name: "Translate programming languages",
+    id: "translate-programming-languages",
+    description: "Translate from one programming language to another.",
+    option: {
+      model: "text-davinci-003",
+
+      temperature: 0.3,
+      max_tokens: 100,
+      top_p: 1.0,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
+    },
+  },
+  {
+    name: "Keywords",
+    id: "keywords",
+    description: "Extract keywords from a block of text.",
+    option: {
+      model: "text-davinci-003",
+
+      temperature: 0.5,
+      max_tokens: 60,
+      top_p: 1.0,
+      frequency_penalty: 0.8,
+      presence_penalty: 0.0,
+    },
+  },
+
+  {
+    name: "ML/AI language model tutor",
+    id: "ML/AI-language-model-tutor",
+    description:
+      "This is a QA-style chatbot that answers questions about language models.",
+    option: {
+      model: "text-davinci-003",
+      temperature: 0.3,
+      max_tokens: 60,
+      top_p: 1.0,
+      frequency_penalty: 0.5,
+      presence_penalty: 0.0,
+      stop: ["You:"],
+    },
+  },
+
+  {
+    name: "Python to natural language",
+    id: "python-to-natural-language",
+    description:
+      "Explain a piece of Python code in human understandable language.",
+    option: {
+      model: "text-davinci-003",
+      temperature: 0,
+      max_tokens: 64,
+      top_p: 1.0,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
+    },
+  },
+  {
+    name: "Essay outline",
+    id: "essay-outline",
+    description: "Generate an outline for a research topic.",
+    option: {
+      model: "text-davinci-003",
+      temperature: 0.3,
+      max_tokens: 150,
+      top_p: 1.0,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
+    },
+  },
+  {
+    name: "Create study notes",
+    id: "create-study-notes",
+    description: "Provide a topic and get study notes.",
+    option: {
+      model: "text-davinci-003",
+      temperature: 0.3,
+      max_tokens: 150,
+      top_p: 1.0,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
+    },
+  },
+  {
+    name: "Notes to summary",
+    id: "Notes-to-summary",
+    description: "Turn meeting notes into a summary.",
+    option: {
+      model: "text-davinci-003",
+      temperature: 0,
+      max_tokens: 64,
+      top_p: 1.0,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
+    },
+  },
+  {
+    name: "Ad from product description",
+    id: "ad-from-product-description",
+    description: "Turn a product description into ad copy..",
+    option: {
+      model: "text-davinci-003",
+      temperature: 0.5,
+      max_tokens: 100,
+      top_p: 1.0,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
+    },
+  },
+  {
+    name: "Explain code",
+    id: "explain-code",
+    description: "Explain a complicated piece of code.",
+    option: {
+      model: "text-davinci-003",
+      temperature: 0,
+      max_tokens: 64,
+      top_p: 1.0,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
+    },
+  },
+
+  {
+    name: "English to other languages",
+    id: "english-to-other-languages",
+    description: "Translates English text into French, Spanish and Japanese.",
+    option: {
+      model: "text-davinci-003",
+      temperature: 0.3,
+      max_tokens: 100,
+      top_p: 1.0,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
+    },
+  },
+];
