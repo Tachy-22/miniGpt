@@ -1,7 +1,7 @@
-#quizGrad
+# quizGrad
 
 quizGrad is a single-page web application built with ReactJS, TailwindCSS, and Firebase. The main feature of the app is to provide users with a quiz where the user can choose a category and answer 5 multiple-choice questions related to that category.
-##Features
+## Features
 
 The following are the main features of quizGrad:
 
@@ -10,7 +10,7 @@ The following are the main features of quizGrad:
     Category Selection Page: After logging in, users can select a category from a dropdown list to start the quiz. The available categories are displayed in the dropdown list.
     Question Answering Page: After selecting a category, the user is presented with 5 multiple-choice questions related to the selected category. Each question has 4 options to choose from. The user can select only one option. When the user submits all 5 questions, the app calculates and displays the score along with a message.
 
-##Installation
+## Installation
 
 To run quizGrad, follow these steps:
 
@@ -19,7 +19,7 @@ To run quizGrad, follow these steps:
     Set up a Firebase project and replace the Firebase configuration in src/firebase.js.
     Run the app using npm start.
 
-##Usage
+## Usage
 
 To use quizGrad, follow these steps:
 
@@ -29,6 +29,6 @@ To use quizGrad, follow these steps:
     Answer all 5 questions and click "Submit".
     The app will calculate the score and display it with a message.
 
-##Contributing
+## Contributing
 
 Contributions to quizGrad are always welcome. If you find any issues or want to improve the app, feel free to create a pull request.
