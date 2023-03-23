@@ -1,4 +1,4 @@
-# quizGrad
+# QuizGrad
 
 quizGrad is a single-page web application built with ReactJS, TailwindCSS, and Firebase. The main feature of the app is to provide users with a quiz where the user can choose a category and answer 5 multiple-choice questions related to that category.
 ## Features
